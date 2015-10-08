@@ -134,7 +134,7 @@ public class TestPersonalInfoPage {
 	
 	private void initializeLogin() {
 		Login login = new Login(driver,url,emailInput,passInput,submit);
-		login.readLoginData("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\login_credentials.data");
+		login.readLoginData("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\login_credentials.data");
 		login.login();
 	}
 	

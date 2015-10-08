@@ -55,7 +55,7 @@ public class TestEditAccountPage {
 		
 		ContactInformation contact = new ContactInformation();
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
 		inputTestData(contact);
 		
 		WebElement submit = driver.findElement(By.xpath(".//*[@id='SaveBtn']"));
@@ -80,8 +80,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_name.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_name.data");
 		
 		for (int i = 0; i < names.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -127,8 +127,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_name.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_name.data");
 		
 		for (int i = 0; i < names.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -174,8 +174,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_name.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_name.data");
 		
 		for (int i = 0; i < names.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -222,8 +222,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Phone> mobile = readMobile("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_mobile.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Phone> mobile = readMobile("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_mobile.data");
 		
 		for (int i = 0; i < mobile.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -269,8 +269,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Phone> home = readMobile("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_home_phone.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Phone> home = readMobile("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_home_phone.data");
 		
 		for (int i = 0; i < home.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -315,8 +315,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Phone> work = readMobile("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_work_phone.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Phone> work = readMobile("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_work_phone.data");
 		
 		for (int i = 0; i < work.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -361,8 +361,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Phone> home = readMobile("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_home_fax.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Phone> home = readMobile("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_home_fax.data");
 		
 		for (int i = 0; i < home.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -407,8 +407,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Phone> work = readMobile("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_work_fax.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Phone> work = readMobile("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_work_fax.data");
 		
 		for (int i = 0; i < work.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -453,8 +453,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Address> names = readAddress("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_home_address.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Address> names = readAddress("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_home_address.data");
 		
 		for (int i = 0; i < names.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -504,8 +504,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Address> names = readAddress("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_work_address.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Address> names = readAddress("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_work_address.data");
 		
 		for (int i = 0; i < names.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -555,8 +555,8 @@ public class TestEditAccountPage {
 		ContactInformation contact = new ContactInformation();
 		int successCount = 0;
 		
-		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_success.data"); 
-		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\test_name.data");
+		contact = readTestData(contact,"C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_success.data"); 
+		ArrayList<Name> names = readNames("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\test_name.data");
 		
 		for (int i = 0; i < names.size() ; i++) {
 			driver.get("https://login.yahoo.com/account/personalinfo");
@@ -781,7 +781,7 @@ public class TestEditAccountPage {
 	
 	private void initializeLogin() {
 		Login login = new Login(driver,url,emailInput,passInput,submit);
-		login.readLoginData("C:\\Users\\dustin.landry\\Documents\\GitHub\\YahooTest\\YahooTest\\src\\data\\login_credentials.data");
+		login.readLoginData("C:\\Users\\dustin.landry\\Documents\\Eclipse Workspace\\YahooTest\\src\\data\\login_credentials.data");
 		login.login();
 	}
 	
