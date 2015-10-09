@@ -16,7 +16,7 @@ import models.*;
 
 public class TestEditAccountPage {
 	private final int SUCCESSFUL_NAME_COUNT = 5;
-	private final int SUCCESSFUL_MOBILE_COUNT = 5;
+	private final int SUCCESSFUL_MOBILE_COUNT = 2;
 	private final int SUCCESSFUL_HOME_PHONE_COUNT = 3;
 	private final int SUCCESSFUL_HOME_FAX_COUNT = 3;
 	private final int SUCCESSFUL_WORK_PHONE_COUNT = 3;
@@ -63,7 +63,7 @@ public class TestEditAccountPage {
 		
 		pause(1000);
 		
-		Assert.assertEquals(driver.getCurrentUrl(),"https://login.yahoo.com/account/personalinfo");
+		Assert.assertEquals(driver.getCurrentUrl().substring(0,44),"https://login.yahoo.com/account/personalinfo");
 		
 		driver.close();
 	}
@@ -544,7 +544,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_WORK_ADDRESS_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWebsiteAccountPage() {
 		initializeDriver();
 		initializeLogin();
