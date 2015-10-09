@@ -35,7 +35,7 @@ public class TestEditAccountPage {
 	private WebDriver driver;
 	
 	// Test EditAccount page with successful data
-	@Test
+	//@Test
 	public void testSuccessAccountPage() {
 		initializeDriver();
 		initializeLogin();
