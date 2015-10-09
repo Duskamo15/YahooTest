@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?eclipse.ant.import?>
+<project basedir="." default="build" name="YahooTest">
+	<property name="report-dir" value="${basedir}/Test-Report" />
+	<property name="testng-report-dir" value="${report-dir}/TestNGreport" />
 
-<property name="report-dir" value="${basedir}/Test-Report" />
-<property name="testng-report-dir" value="${report-dir}/TestNGreport" />
+	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="YahooTest.classpath" />
 
-<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="YahooTest.classpath" />
-
-<target name="testng-execution" depends="build-project">
-	<mkdir dir="${testng-report-dir}" />
-	<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
-		<xmlfileset dir="${YahooTest}" includes="tests.xml" />
-	</testng>
-</target>
+	<target name="testng-execution" depends="build-project">
+		<mkdir dir="${testng-report-dir}" />
+		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
+			<xmlfileset dir="${YahooTest}" includes="tests.xml" />
+		</testng>
+	</target>
+</project>
