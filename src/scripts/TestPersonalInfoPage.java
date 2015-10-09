@@ -20,7 +20,7 @@ public class TestPersonalInfoPage {
 	
 	private WebDriver driver;
 	
-	//@Test
+	@Test
 	public void testEditAccountButton() {	
 		initializeDriver();
 		initializeLogin();
@@ -33,7 +33,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testManageAccountButton() {
 		initializeDriver();
 		initializeLogin();
@@ -60,7 +60,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testAccountSecurityButton() {
 		initializeDriver();
 		initializeLogin();
@@ -73,7 +73,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testRecentActivityButton() {
 		initializeDriver();
 		initializeLogin();
@@ -86,7 +86,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testPreferencesButton() {
 		initializeDriver();
 		initializeLogin();
@@ -99,7 +99,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testSubscriptionsButton() {
 		initializeDriver();
 		initializeLogin();
@@ -124,7 +124,6 @@ public class TestPersonalInfoPage {
 		pause(1000);
 		
 		WebElement editAccount = driver.findElement(By.xpath(xpath));
-		String js = "arguments[0].style.height='auto'; arguments[0].style.visibility='visible';";
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", editAccount);
 		
