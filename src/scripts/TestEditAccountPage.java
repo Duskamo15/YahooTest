@@ -35,7 +35,7 @@ public class TestEditAccountPage {
 	private WebDriver driver;
 	
 	// Test EditAccount page with successful data
-	//@Test
+	@Test
 	public void testSuccessAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -69,7 +69,7 @@ public class TestEditAccountPage {
 	}
 	
 	// Test the 3 name fields on the edit account page
-	//@Test
+	@Test
 	public void testNameEditAccountPage() {
 		initializeDriver();
 		initializeLogin();

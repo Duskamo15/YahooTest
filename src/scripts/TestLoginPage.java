@@ -27,7 +27,7 @@ public class TestLoginPage {
 	
 	private WebDriver driver;
 	
-	//@Test
+	@Test
 	public void testCorrectLogin() {
 		initializeDriver();
 		Login login = new Login(driver,url,emailInput,passInput,submit);
@@ -46,7 +46,7 @@ public class TestLoginPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testIncorrectLogin() {
 		initializeDriver();
 		Login login = new Login(driver,url,emailInput,passInput,submit);
