@@ -2,6 +2,7 @@
 <?eclipse.ant.import?>
 
 <project basedir="." default="build" name="YahooTest">
+	<property name="basedir" value="." />
 	<property name="report-dir" value="${basedir}/Test-Report" />
 	<property name="testng-report-dir" value="${report-dir}/TestNGreport" />
 
@@ -10,7 +11,7 @@
 	<target name="testng-execution" depends="build-project">
 		<mkdir dir="${testng-report-dir}" />
 		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
-			<xmlfileset dir="${YahooTest}" includes="tests.xml" />
+			<xmlfileset dir="${basedir}" includes="tests.xml" />
 		</testng>
 	</target>
 </project>
