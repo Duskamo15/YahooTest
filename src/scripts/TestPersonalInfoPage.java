@@ -126,11 +126,11 @@ public class TestPersonalInfoPage {
 		WebElement editAccount = driver.findElement(By.xpath(xpath));
 		String js = "arguments[0].style.height='auto'; arguments[0].style.visibility='visible';";
 
-		((JavascriptExecutor) driver).executeScript(js, editAccount);
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", editAccount);
 		
 		//WebElement editAccount = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		//WebElement editAccount = driver.findElement(By.xpath(xpath));
-		editAccount.click();
+		//editAccount.click();
 	}
 	
 	private void initializeDriver() {
