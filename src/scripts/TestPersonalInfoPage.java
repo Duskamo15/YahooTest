@@ -47,6 +47,9 @@ public class TestPersonalInfoPage {
 	public void testPersonalInfoButton() {
 		initializeDriver();
 		initializeLogin();
+		
+		pause(3000);
+		
 		testButton(".//*[@class='clrfix selected']");
 		
 		pause(1000);
