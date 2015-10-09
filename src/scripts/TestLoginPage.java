@@ -69,12 +69,13 @@ public class TestLoginPage {
 	
 	// *************************************************** helpers ***********************************************************  
 	private void initializeDriver() {
-		//driver = new FirefoxDriver();
-		
+		driver = new FirefoxDriver();
+		/*
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setJavascriptEnabled(true);
 
 		driver = new RemoteWebDriver(capabilities);
+		*/
 	}
 	
 	private void pause(long mili) {

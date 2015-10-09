@@ -777,12 +777,13 @@ public class TestEditAccountPage {
 	}
 	
 	private void initializeDriver() {
-		//driver = new FirefoxDriver();
-		
+		driver = new FirefoxDriver();
+		/*
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setJavascriptEnabled(true);
 
 		driver = new RemoteWebDriver(capabilities);
+		*/
 	}
 	
 	private void initializeLogin() {
