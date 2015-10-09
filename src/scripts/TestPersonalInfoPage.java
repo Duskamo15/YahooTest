@@ -51,7 +51,7 @@ public class TestPersonalInfoPage {
 		initializeDriver();
 		initializeLogin();
 
-		testButton("//*[@class='clrfix selected']");
+		testButton(".//*[@class='clrfix selected']");
 		
 		pause(1000);
 		
