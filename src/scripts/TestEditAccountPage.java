@@ -35,7 +35,7 @@ public class TestEditAccountPage {
 	private WebDriver driver;
 	
 	// Test EditAccount page with successful data
-	//@Test
+	@Test
 	public void testSuccessAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -116,7 +116,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_NAME_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testEmailAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -163,7 +163,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_NAME_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testMessengerAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -211,7 +211,7 @@ public class TestEditAccountPage {
 	}
 	
 	// test the 2 fields of the mobile component on the edit account page
-	//@Test
+	@Test
 	public void testMobileAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -258,7 +258,7 @@ public class TestEditAccountPage {
 	}
 	
 	// test the 2 fields of the home phone component on the edit account page
-	//@Test
+	@Test
 	public void testHomePhoneAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -304,7 +304,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_HOME_PHONE_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWorkPhoneAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -350,7 +350,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_WORK_PHONE_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testHomeFaxAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -396,7 +396,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_HOME_FAX_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWorkFaxAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -442,7 +442,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_WORK_FAX_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testHomeAddressAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -493,7 +493,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_HOME_ADDRESS_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWorkAddressAccountPage() {
 		initializeDriver();
 		initializeLogin();
