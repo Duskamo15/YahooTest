@@ -1,5 +1,6 @@
 package scripts;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -122,12 +123,12 @@ public class TestPersonalInfoPage {
 		// pause 1 second
 		pause(1000);
 		
-		//WebElement elem = driver.findElement(By.xpath("xpath"));
-		//String js = "arguments[0].style.height='auto'; arguments[0].style.visibility='visible';";
+		WebElement editAccount = driver.findElement(By.xpath(xpath));
+		String js = "arguments[0].style.height='auto'; arguments[0].style.visibility='visible';";
 
-		//((JavascriptExecutor) yourWebDriverInstance).executeScript(js, elem);
+		((JavascriptExecutor) driver).executeScript(js, editAccount);
 		
-		WebElement editAccount = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+		//WebElement editAccount = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		//WebElement editAccount = driver.findElement(By.xpath(xpath));
 		editAccount.click();
 	}
