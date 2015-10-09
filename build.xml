@@ -54,7 +54,7 @@
         </java>
     </target>
 	
-	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="classpath" />
+	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="YahooTest.classpath" />
 	
 	<target name="testng-execution" depends="compile">
 		<mkdir dir="${testng-report-dir}" />
