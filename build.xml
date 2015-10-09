@@ -56,7 +56,7 @@
 	
 	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="YahooTest.classpath" />
 	
-	<target name="testng-execution" depends="compile">
+	<target name="testng-execution" depends="build-project">
 		<mkdir dir="${testng-report-dir}" />
 		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
 			<xmlfileset dir="${basedir}" includes="tests.xml" />
