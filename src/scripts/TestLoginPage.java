@@ -15,6 +15,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class TestLoginPage {
 	private String url = "";
@@ -67,7 +69,12 @@ public class TestLoginPage {
 	
 	// *************************************************** helpers ***********************************************************  
 	private void initializeDriver() {
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setJavascriptEnabled(true);
+
+		driver = new RemoteWebDriver(capabilities);
 	}
 	
 	private void pause(long mili) {

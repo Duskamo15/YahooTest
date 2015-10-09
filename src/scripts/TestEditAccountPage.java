@@ -8,7 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
-
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -776,7 +777,12 @@ public class TestEditAccountPage {
 	}
 	
 	private void initializeDriver() {
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setJavascriptEnabled(true);
+
+		driver = new RemoteWebDriver(capabilities);
 	}
 	
 	private void initializeLogin() {
