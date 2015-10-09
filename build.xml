@@ -55,14 +55,5 @@
         <java classname="YahooTest" failonerror="true" fork="yes">
             <classpath refid="YahooTest.classpath"/>
         </java>
-    </target>
-	
-	<taskdef name="testng" classname="org.testng.TestNGAntTask" classpathref="YahooTest.classpath" />
-	
-	<target name="testng-execution" depends="build-project">
-		<mkdir dir="${testng-report-dir}" />
-		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
-			<xmlfileset dir="${YahooTest}" includes="tests.xml" />
-		</testng>
-	</target>
+    </target>	
 </project>
