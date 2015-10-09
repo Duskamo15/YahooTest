@@ -10,7 +10,7 @@
 
 	<target name="testng-execution" depends="build-project">
 		<mkdir dir="${testng-report-dir}" />
-		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
+		<testng outputdir="${testng-report-dir}" classpathref="YahooTest.classpath" useDefaultListeners="true">
 			<xmlfileset dir="${basedir}" includes="tests.xml" />
 		</testng>
 	</target>
