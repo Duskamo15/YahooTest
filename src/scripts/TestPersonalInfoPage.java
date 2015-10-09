@@ -129,7 +129,7 @@ public class TestPersonalInfoPage {
 		// pause 1 second
 		pause(1000);
 		
-		WebElement editAccount = (new WebDriverWait(driver, 10)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
+		WebElement editAccount = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		//WebElement editAccount = driver.findElement(By.xpath(xpath));
 		editAccount.click();
 	}
