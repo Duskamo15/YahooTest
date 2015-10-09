@@ -49,10 +49,8 @@ public class TestPersonalInfoPage {
 	public void testPersonalInfoButton() {
 		initializeDriver();
 		initializeLogin();
-		
-		pause(10000);
-		
-		testButton(".//*[@class='clrfix selected']");
+
+		testButton("//*[@class='clrfix selected']");
 		
 		pause(1000);
 		
@@ -117,17 +115,17 @@ public class TestPersonalInfoPage {
 	
 	private void testButton(String xpath) {
 		// pause 1 second
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		pause(1000);
 		
 		driver.get("https://login.yahoo.com/account/personalinfo");
 		
 		// pause 1 second
 		pause(1000);
+		
+		//WebElement elem = driver.findElement(By.xpath("xpath"));
+		//String js = "arguments[0].style.height='auto'; arguments[0].style.visibility='visible';";
+
+		//((JavascriptExecutor) yourWebDriverInstance).executeScript(js, elem);
 		
 		WebElement editAccount = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 		//WebElement editAccount = driver.findElement(By.xpath(xpath));
