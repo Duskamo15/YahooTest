@@ -8,6 +8,9 @@
     <property name="debuglevel" value="source,lines,vars"/>
     <property name="target" value="1.8"/>
     <property name="source" value="1.8"/>
+	<property name="report-dir" value="${basedir}/Test-Report" />
+	<property name="testng-report-dir" value="${report-dir}/TestNGreport" />
+	
     <path id="YahooTest.classpath">
         <pathelement location="bin"/>
         <pathelement location="lib/selenium-server-standalone-2.47.1.jar"/>
@@ -59,7 +62,7 @@
 	<target name="testng-execution" depends="build-project">
 		<mkdir dir="${testng-report-dir}" />
 		<testng outputdir="${testng-report-dir}" classpathref="classpath" useDefaultListeners="true">
-			<xmlfileset dir="${basedir}" includes="tests.xml" />
+			<xmlfileset dir="${YahooTest}" includes="tests.xml" />
 		</testng>
 	</target>
 </project>
