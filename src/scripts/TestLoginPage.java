@@ -29,7 +29,7 @@ public class TestLoginPage {
 	private WebElement passInput;
 	private WebElement submit;
 	
-	private RemoteWebDriver driver;
+	private WebDriver driver;
 	
 	@Test
 	public void testCorrectLogin() {
@@ -71,13 +71,13 @@ public class TestLoginPage {
 	
 	// *************************************************** helpers ***********************************************************  
 	private void initializeDriver() {
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
 		
-		/*try {
-			driver = new RemoteWebDriver(new URL("http://localhost:7055"), DesiredCapabilities.firefox());	
+		try {
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
 		} catch (Exception e) {
 			e.printStackTrace();
-		}*/
+		}		
 	}
 	
 	private void pause(long mili) {
