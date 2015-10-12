@@ -1,4 +1,6 @@
 package scripts;
+import java.net.URL;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -22,7 +24,7 @@ public class TestPersonalInfoPage {
 	
 	private WebDriver driver;
 	
-	//@Test
+	@Test
 	public void testEditAccountButton() {	
 		initializeDriver();
 		initializeLogin();
@@ -35,7 +37,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testManageAccountButton() {
 		initializeDriver();
 		initializeLogin();
@@ -48,7 +50,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testPersonalInfoButton() {
 		initializeDriver();
 		initializeLogin();
@@ -62,7 +64,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testAccountSecurityButton() {
 		initializeDriver();
 		initializeLogin();
@@ -75,7 +77,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testRecentActivityButton() {
 		initializeDriver();
 		initializeLogin();
@@ -88,7 +90,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testPreferencesButton() {
 		initializeDriver();
 		initializeLogin();
@@ -101,7 +103,7 @@ public class TestPersonalInfoPage {
 		driver.close();
 	}
 	
-	//@Test
+	@Test
 	public void testSubscriptionsButton() {
 		initializeDriver();
 		initializeLogin();
@@ -135,13 +137,13 @@ public class TestPersonalInfoPage {
 	}
 	
 	private void initializeDriver() {
-		driver = new FirefoxDriver();		
-		/*
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setJavascriptEnabled(true);
-
-		driver = new RemoteWebDriver(capabilities);
-		*/
+		//driver = new FirefoxDriver();
+		
+		try {
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
 	}
 	
 	private void initializeLogin() {

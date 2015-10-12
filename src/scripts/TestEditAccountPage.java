@@ -1,5 +1,6 @@
 package scripts;
 import java.io.IOException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -36,7 +37,7 @@ public class TestEditAccountPage {
 	private WebDriver driver;
 	
 	// Test EditAccount page with successful data
-	//@Test
+	@Test
 	public void testSuccessAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -70,7 +71,7 @@ public class TestEditAccountPage {
 	}
 	
 	// Test the 3 name fields on the edit account page
-	//@Test
+	@Test
 	public void testNameEditAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -117,7 +118,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_NAME_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testEmailAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -164,7 +165,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_NAME_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testMessengerAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -212,7 +213,7 @@ public class TestEditAccountPage {
 	}
 	
 	// test the 2 fields of the mobile component on the edit account page
-	//@Test
+	@Test
 	public void testMobileAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -259,7 +260,7 @@ public class TestEditAccountPage {
 	}
 	
 	// test the 2 fields of the home phone component on the edit account page
-	//@Test
+	@Test
 	public void testHomePhoneAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -305,7 +306,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_HOME_PHONE_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWorkPhoneAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -351,7 +352,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_WORK_PHONE_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testHomeFaxAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -397,7 +398,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_HOME_FAX_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWorkFaxAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -443,7 +444,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_WORK_FAX_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testHomeAddressAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -494,7 +495,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_HOME_ADDRESS_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWorkAddressAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -545,7 +546,7 @@ public class TestEditAccountPage {
 		Assert.assertEquals(successCount,SUCCESSFUL_WORK_ADDRESS_COUNT);
 	}
 	
-	//@Test
+	@Test
 	public void testWebsiteAccountPage() {
 		initializeDriver();
 		initializeLogin();
@@ -777,13 +778,13 @@ public class TestEditAccountPage {
 	}
 	
 	private void initializeDriver() {
-		driver = new FirefoxDriver();
-		/*
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setJavascriptEnabled(true);
-
-		driver = new RemoteWebDriver(capabilities);
-		*/
+		//driver = new FirefoxDriver();
+		
+		try {
+			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}	
 	}
 	
 	private void initializeLogin() {
