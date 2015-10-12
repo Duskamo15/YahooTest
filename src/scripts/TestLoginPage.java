@@ -7,6 +7,8 @@ import org.testng.annotations.Test;
 import com.gargoylesoftware.htmlunit.javascript.host.file.FileReader;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -27,7 +29,7 @@ public class TestLoginPage {
 	private WebElement passInput;
 	private WebElement submit;
 	
-	private WebDriver driver;
+	private RemoteWebDriver driver;
 	
 	@Test
 	public void testCorrectLogin() {
@@ -70,12 +72,12 @@ public class TestLoginPage {
 	// *************************************************** helpers ***********************************************************  
 	private void initializeDriver() {
 		driver = new FirefoxDriver();
-		/*
-		DesiredCapabilities capabilities = new DesiredCapabilities();
-		capabilities.setJavascriptEnabled(true);
-
-		driver = new RemoteWebDriver(capabilities);
-		*/
+		
+		/*try {
+			driver = new RemoteWebDriver(new URL("http://localhost:7055"), DesiredCapabilities.firefox());	
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
 	}
 	
 	private void pause(long mili) {
