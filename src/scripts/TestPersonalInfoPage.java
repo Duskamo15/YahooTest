@@ -5,10 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -23,6 +21,8 @@ public class TestPersonalInfoPage {
 	private WebElement submit;
 	
 	private WebDriver driver;
+	
+	private WebDriverWait wait;
 	
 	@Test
 	public void testEditAccountButton() {	
@@ -127,13 +127,11 @@ public class TestPersonalInfoPage {
 		// pause 1 second
 		pause(1000);
 		
+		//WebElement editAccount = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		
 		WebElement editAccount = driver.findElement(By.xpath(xpath));
 
 		((JavascriptExecutor) driver).executeScript("arguments[0].click();", editAccount);
-		
-		//WebElement editAccount = (new WebDriverWait(driver, 30)).until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
-		//WebElement editAccount = driver.findElement(By.xpath(xpath));
-		//editAccount.click();
 	}
 	
 	private void initializeDriver() {
@@ -141,6 +139,7 @@ public class TestPersonalInfoPage {
 		
 		try {
 			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.firefox());
+			//wait = new WebDriverWait(driver, 10);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}	
